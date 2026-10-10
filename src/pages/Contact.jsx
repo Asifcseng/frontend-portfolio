@@ -1,0 +1,2 @@
+import { ArrowUpRight, Mail } from "lucide-react";
+export default function Contact(){return <section className="contact-section" id="contact"><div className="wrap contact-inner"><span className="eyebrow">05 / CONTACT</span><div className="contact-row"><h2>Have a product in mind?<br/><span>Let’s build something thoughtful.</span></h2><a href="mailto:asifshaikh.cse@gmail.com" className="email-button"><Mail size={17}/> Email me <ArrowUpRight size={16}/></a></div><a className="contact-email" href="mailto:asifshaikh.cse@gmail.com">asifshaikh.cse@gmail.com</a></div></section>}
