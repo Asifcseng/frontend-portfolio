@@ -1,3 +1,27 @@
-import { ArrowRight } from "lucide-react";
-const steps=[{n:"01",title:"Understand",copy:"Start with the people, the context, and the real need."},{n:"02",title:"Explore",copy:"Shape useful flows, test ideas, and find the clearest direction."},{n:"03",title:"Design",copy:"Create a thoughtful interface with accessible details."},{n:"04",title:"Build",copy:"Bring the experience to life with responsive frontend code."}];
-export default function Skills(){return <section className="section wrap" id="skills"><div className="design-code"><div className="design-intro"><span className="eyebrow">02 / DESIGN + CODE</span><h2>One idea.<br/>Made real.</h2><p>I enjoy moving between the big picture and the fine details—connecting user needs, visual decisions, and the code that brings an experience to life.</p><div className="skill-labels"><div><span>DESIGN</span><p>UX · UI · Wireframes · Prototyping</p></div><div><span>BUILD</span><p>React · JavaScript · Responsive UI</p></div></div></div><div className="process-list">{steps.map(s=><div className="process-step" key={s.n}><span>{s.n}</span><div><h3>{s.title}</h3><p>{s.copy}</p></div><ArrowRight size={17}/></div>)}</div></div></section>}
+const groups = [
+  { title: "UX / UI design", label: "DESIGN", items: ["User flows", "Wireframes", "Interface design", "Prototyping", "Design systems", "Accessibility"] },
+  { title: "Frontend development", label: "BUILD", items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "HTML & CSS"] },
+  { title: "APIs & tools", label: "SUPPORT", items: ["REST APIs", "FastAPI", "MongoDB", "PostgreSQL", "Git & GitHub", "Vite / Webpack"] },
+];
+const steps = ["Understand", "Structure", "Design", "Develop"];
+export default function Skills() {
+  return (
+    <section className="section wrap" id="skills">
+      <div className="skills-heading">
+        <div><span className="eyebrow">02 / DESIGN + CODE</span><h2>From first question<br />to finished interface.</h2></div>
+        <p>My process connects user needs, visual decisions, and the code that brings an experience to life.</p>
+      </div>
+      <div className="process-rail" aria-label="Design and development process">
+        {steps.map((step, index) => <div className="process-stop" key={step}><span>0{index + 1}</span><b>{step}</b></div>)}
+      </div>
+      <div className="toolkit-heading"><span>THE TOOLKIT</span><span>DESIGN × DEVELOPMENT</span></div>
+      <div className="toolkit-grid">
+        {groups.map((group, index) => <article className={`toolkit-card toolkit-card-${index + 1}`} key={group.title}>
+          <div className="toolkit-top"><span>{group.label}</span><span>0{index + 1}</span></div>
+          <h3>{group.title}</h3>
+          <div className="toolkit-tags">{group.items.map(item => <span key={item}>{item}</span>)}</div>
+        </article>)}
+      </div>
+    </section>
+  );
+}

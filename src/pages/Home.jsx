@@ -1,34 +1,38 @@
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+
 export default function Home() {
   return (
     <section className="hero wrap" id="home">
       <div className="hero-top">
         <span className="eyebrow">
-          <i /> PORTFOLIO · 2025
+          <i /> PORTFOLIO · 2026
         </span>
         <span className="hero-location">
           Based in India · Available for opportunities
         </span>
       </div>
       <div className="hero-content">
-        <h1>
-          UI/UX Designer <span>&amp;</span>
-          <br />
-          Frontend Developer
-        </h1>
-        <div className="hero-bottom">
-          <p>
-            I design thoughtful interfaces and build them into polished,
-            accessible web experiences.
-          </p>
-          <a
-            className="round-link"
-            href="#projects"
-            aria-label="Explore selected work"
-          >
-            <ArrowDown size={18} />
-          </a>
+        <div className="hero-main">
+          <h1>
+            UI/UX Designer <span>&amp;</span>
+            <br />
+            Frontend Developer
+          </h1>
+          <div className="hero-bottom">
+            <p>
+              I design thoughtful interfaces and build them into polished,
+              accessible web experiences.
+            </p>
+          </div>
         </div>
+        {/* <div className="hero-graphic" aria-hidden="true">
+          <div className="graphic-grid" />
+          <div className="graphic-orbit" />
+          <div className="graphic-disc" />
+          <span className="graphic-mark">A</span>
+          <span className="graphic-code">AS / 26</span>
+          <span className="graphic-caption">DESIGN × DEVELOPMENT</span>
+        </div> */}
       </div>
       <div className="hero-index">
         <span>DESIGN THINKING</span>
